@@ -29,8 +29,26 @@ footer {
   чтобы оно не растягивалось слишком сильно на широких экранах.
 */
 .site-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
   max-width: 1100px;
+  min-height: 30px;
+  padding-left: 160px;
   margin: 0 auto;
+}
+
+/*
+  Текстовый логотип ведёт в начало страницы.
+*/
+.site-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #222222;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /*
@@ -111,26 +129,11 @@ footer {
   На следующих занятиях карточки будут доработаны и выстроены в сетку.
 */
 .product-card {
-  position: relative;
   margin: 0;
   padding: 16px;
   border: 1px solid #dddddd;
   border-radius: 8px;
   background-color: #ffffff;
-}
-
-/*
-  Бейдж позиционируется относительно карточки товара.
-*/
-.product-card__badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 4px 8px;
-  color: #ffffff;
-  background-color: #b00020;
-  border-radius: 4px;
-  font-size: 14px;
 }
 
 /*
@@ -283,6 +286,7 @@ footer {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;

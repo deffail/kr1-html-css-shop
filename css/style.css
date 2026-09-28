@@ -34,20 +34,14 @@ footer {
 }
 
 /*
-  Оформляем текстовый логотип.
-*/
-.site-logo {
-  font-weight: bold;
-  text-decoration: none;
-  color: #222222;
-}
-
-/*
   Убираем стандартные отступы и маркеры списка навигации.
 */
 .site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
   padding: 0;
-  margin: 16px 0 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -55,7 +49,7 @@ footer {
   Добавляем расстояние между пунктами меню.
 */
 .site-nav__list li {
-  margin-bottom: 8px;
+  margin: 0;
 }
 
 /*
@@ -102,11 +96,22 @@ footer {
 }
 
 /*
+  Grid-контейнер автоматически раскладывает карточки по колонкам.
+  Каждая колонка имеет ширину не меньше 240px, а при наличии места
+  карточки равномерно делят всю доступную ширину.
+*/
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/*
   Карточка товара — самостоятельный блок.
   На следующих занятиях карточки будут доработаны и выстроены в сетку.
 */
 .product-card {
-  margin-bottom: 16px;
+  margin: 0;
   padding: 16px;
   border: 1px solid #dddddd;
   border-radius: 8px;
